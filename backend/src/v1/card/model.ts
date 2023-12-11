@@ -8,7 +8,6 @@ export interface CardModel extends Model {
   current_spend: number;
   spend_limit: number;
   currency: Currency;
-  invoice_due_date: string;
   expiration_date: string;
   status: Status;
   card_number: string;

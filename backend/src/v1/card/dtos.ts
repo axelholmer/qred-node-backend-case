@@ -7,7 +7,6 @@ export interface CardResponseDto extends ResponseDto {
   currentSpend: number;
   spendLimit: number;
   currency: Currency;
-  invoiceDueDate: string;
   expirationDate: string;
   status: Status;
   cardNumber: string;
