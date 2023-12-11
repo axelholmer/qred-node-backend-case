@@ -19,8 +19,8 @@ Next, run `docker-compose up`
 
 ### Nice to haves/missing features
 - Two apis instead of one. 1. internal api (implement missing REST endpoints) and one frontend-facing api (stream changes)
-- Run API on AWS EC2 (or restructure with lambda functions) 
-- Proper auth middleware (OAuth/Amazon Cognito)
+- Run API on AWS EC2 (or restructure with lambda functions)
+- Proper auth middleware (Amazon Cognito)
 - Better input validation in endpoints (class-validator)
 - Openapi specification
 - More unit tests written. Currently I only wrote a test for the company controller
@@ -28,10 +28,10 @@ Next, run `docker-compose up`
 - Pagination of payload response
 - Util function to convert amounts/values (which are in minor units) to correct format.
 - Proper mapper to map dto to entity etc..
-- SQL-injection?
 - Card numbers and other sensitive data should be encrypted and not sensitive info censored.
 - Extract types (request/response dtos) and other common functionality in packages (devkit) to be able to share with frontend.
-- Some type of caching 
+- Some type of caching
 - Relevant comments
+- SQL-injection protection
 
 
