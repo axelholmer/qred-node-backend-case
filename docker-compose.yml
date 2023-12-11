@@ -1,0 +1,26 @@
+version: '3'
+services:
+  backend:
+    image: qred-case/backend:latest
+    build: backend
+    environment:
+     - DB_HOST=database
+    depends_on:
+      - database
+    links:
+     - "database"
+    volumes:
+      - ./backend:/backend
+      - /backend/node_modules
+    ports:
+      - 9090:9090
+ 
+  database:
+    image: "postgres:11"
+    env_file:
+    - ./db/localdb.env
+    volumes:
+    - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+    - 5432:5432
+    
