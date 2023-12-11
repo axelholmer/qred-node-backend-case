@@ -23,10 +23,11 @@ Next, run `docker-compose up`
 - Proper auth middleware (Amazon Cognito)
 - Better input validation in endpoints (class-validator package)
 - Openapi specification
+- Use AWS RDS (Either PostgresSQL)
 - More unit tests written. Currently I only wrote a test for the company controller
 - Custom logger (winston?)
 - Pagination of payload response
-- Util function to convert amounts/values (which are in minor units) to correct format (dinero package).
+- Util functionality to convert amounts/values (which are in minor units) to correct format (dinero package).
 - Proper mapper to map dto to entity etc..
 - Card numbers and other sensitive data should be encrypted and not sensitive info censored.
 - Extract types (request/response dtos) and other common functionality in packages (devkit) to be able to share with frontend.
