@@ -3,18 +3,20 @@ import * as CardService from "./service";
 import NotFoundError from "../common/errors/not-found.error";
 import BadRequestError from "../common/errors/bad-request.error";
 
-
 interface CardRequestParams {
   cardId: string;
 }
 
-export const getCardById = async (req: Request<CardRequestParams>, res: Response, next: NextFunction) => {
+export const getCardById = async (
+  req: Request<CardRequestParams>,
+  res: Response,
+  next: NextFunction
+) => {
   try {
     const cardId = req.params.cardId;
     if (!cardId) {
       throw new BadRequestError("Request params cardId is required");
     }
-
 
     const card = await CardService.getCard(cardId);
     if (!card) {
@@ -32,9 +34,9 @@ export const getCardsByCompanyId = async (
   next: NextFunction
 ) => {
   try {
-    const companyId = req.query?.companyId
+    const companyId = req.query?.companyId;
 
-    if (typeof companyId !== 'string') {
+    if (typeof companyId !== "string") {
       throw new BadRequestError("Invalid companyId provided");
     }
 
