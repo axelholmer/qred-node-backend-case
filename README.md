@@ -25,14 +25,12 @@ Next, run `docker-compose up`
 - Openapi specification
 - Use AWS RDS (Either PostgresSQL)
 - More unit tests written. Currently I only wrote a test for the company controller
-- Custom logger (winston?)
+- Custom logger (winston)
 - Pagination of payload response
 - Util functionality to convert amounts/values (which are in minor units) to correct format (dinero package).
 - Proper mapper to map dto to entity etc..
-- Card numbers and other sensitive data should be encrypted and not sensitive info censored.
+- Card numbers and other sensitive data should be encrypted and sensitive info censored.
 - Extract types (request/response dtos) and other common functionality in packages (devkit) to be able to share with frontend.
 - Some type of caching
 - Relevant comments
 - SQL-injection protection
-
-

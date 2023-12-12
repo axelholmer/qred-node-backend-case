@@ -34,7 +34,7 @@ export const getCardsByCompanyId = async (
   try {
     const companyId = req.query?.companyId
 
-    if (!companyId) {
+    if (typeof companyId !== 'string') {
       throw new BadRequestError("Invalid companyId provided");
     }
 
